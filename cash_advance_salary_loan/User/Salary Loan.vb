@@ -117,7 +117,7 @@ Public Class frm_userSalaryLoan
 
     Private Sub txt_mosToPay_TextChanged(sender As Object, e As EventArgs) Handles txt_mosToPay.TextChanged
         Dim BaseAmount As Double
-        Dim Interest As Double = "250" '2.5%
+        Dim Interest As Double = "40"
         Dim Month As Double
         Dim MonthlyBal As Double
 
@@ -164,5 +164,9 @@ Public Class frm_userSalaryLoan
         If Char.IsNumber(e.KeyChar) AndAlso Asc(e.KeyChar) <> Keys.Back Then
             e.Handled = True
         End If
+    End Sub
+
+    Private Sub frm_userSalaryLoan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
