@@ -84,7 +84,7 @@ Public Class frm_accountManage
 
     Private Sub btn_edit_Click(sender As Object, e As EventArgs) Handles btn_edit.Click
         Dim conn As New OleDbConnection(cs)
-        Dim update As String = "UPDATE [identity] SET [password]=@Password, usertype=@UserType WHERE login_id=@LoginID" 'database query
+        Dim update As String = "UPDATE [identity] SET [password]=@Password, usertype=@UserType WHERE identity_id=@LoginID" 'database query
         'Password is inside [] because its a default entity within the language
 
         If txt_modifyPassword.Text = Nothing Or cmb_modifyUserType.Text = Nothing Then
@@ -137,7 +137,7 @@ Public Class frm_accountManage
 
     Private Sub btn_delete_Click(sender As Object, e As EventArgs) Handles btn_delete.Click
         Dim conn As New OleDbConnection(cs)
-        Dim update As String = "DELETE FROM [identity] WHERE login_id=@LoginID" 'database query
+        Dim update As String = "DELETE FROM [identity] WHERE identity_id=@LoginID" 'database query
 
         conn.Open()
 

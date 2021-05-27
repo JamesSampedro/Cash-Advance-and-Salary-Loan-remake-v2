@@ -57,12 +57,16 @@ Partial Class frm_accountManage
         Me.txt_modifyPassword = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.dgv_loginList = New System.Windows.Forms.DataGridView()
-        Me.IdentityBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IdentityTableAdapter = New cash_advance_salary_loan.cash_advance_salary_loanDataSetTableAdapters.identityTableAdapter()
         Me.identity_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.employee_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.password = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.usertype = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdentityBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IdentityTableAdapter = New cash_advance_salary_loan.cash_advance_salary_loanDataSetTableAdapters.identityTableAdapter()
+        Me.IdentityidDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmployeeidDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsertypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgv_employeeList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -358,7 +362,6 @@ Partial Class frm_accountManage
         '
         Me.txt_modifyPassword.Location = New System.Drawing.Point(113, 54)
         Me.txt_modifyPassword.Name = "txt_modifyPassword"
-        Me.txt_modifyPassword.ReadOnly = True
         Me.txt_modifyPassword.Size = New System.Drawing.Size(154, 22)
         Me.txt_modifyPassword.TabIndex = 28
         '
@@ -375,7 +378,7 @@ Partial Class frm_accountManage
         '
         Me.dgv_loginList.AutoGenerateColumns = False
         Me.dgv_loginList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_loginList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.identity_id, Me.employee_id, Me.password, Me.usertype})
+        Me.dgv_loginList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.identity_id, Me.employee_id, Me.password, Me.usertype, Me.IdentityidDataGridViewTextBoxColumn, Me.EmployeeidDataGridViewTextBoxColumn1, Me.PasswordDataGridViewTextBoxColumn, Me.UsertypeDataGridViewTextBoxColumn})
         Me.dgv_loginList.DataSource = Me.IdentityBindingSource
         Me.dgv_loginList.Location = New System.Drawing.Point(12, 344)
         Me.dgv_loginList.Name = "dgv_loginList"
@@ -383,15 +386,6 @@ Partial Class frm_accountManage
         Me.dgv_loginList.RowTemplate.Height = 24
         Me.dgv_loginList.Size = New System.Drawing.Size(553, 252)
         Me.dgv_loginList.TabIndex = 38
-        '
-        'IdentityBindingSource
-        '
-        Me.IdentityBindingSource.DataMember = "identity"
-        Me.IdentityBindingSource.DataSource = Me.Cash_advance_salary_loanDataSet
-        '
-        'IdentityTableAdapter
-        '
-        Me.IdentityTableAdapter.ClearBeforeFill = True
         '
         'identity_id
         '
@@ -425,6 +419,47 @@ Partial Class frm_accountManage
         Me.usertype.MinimumWidth = 6
         Me.usertype.Name = "usertype"
         Me.usertype.Width = 125
+        '
+        'IdentityBindingSource
+        '
+        Me.IdentityBindingSource.DataMember = "identity"
+        Me.IdentityBindingSource.DataSource = Me.Cash_advance_salary_loanDataSet
+        '
+        'IdentityTableAdapter
+        '
+        Me.IdentityTableAdapter.ClearBeforeFill = True
+        '
+        'IdentityidDataGridViewTextBoxColumn
+        '
+        Me.IdentityidDataGridViewTextBoxColumn.DataPropertyName = "identity_id"
+        Me.IdentityidDataGridViewTextBoxColumn.HeaderText = "identity_id"
+        Me.IdentityidDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdentityidDataGridViewTextBoxColumn.Name = "IdentityidDataGridViewTextBoxColumn"
+        Me.IdentityidDataGridViewTextBoxColumn.Width = 125
+        '
+        'EmployeeidDataGridViewTextBoxColumn1
+        '
+        Me.EmployeeidDataGridViewTextBoxColumn1.DataPropertyName = "employee_id"
+        Me.EmployeeidDataGridViewTextBoxColumn1.HeaderText = "employee_id"
+        Me.EmployeeidDataGridViewTextBoxColumn1.MinimumWidth = 6
+        Me.EmployeeidDataGridViewTextBoxColumn1.Name = "EmployeeidDataGridViewTextBoxColumn1"
+        Me.EmployeeidDataGridViewTextBoxColumn1.Width = 125
+        '
+        'PasswordDataGridViewTextBoxColumn
+        '
+        Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "password"
+        Me.PasswordDataGridViewTextBoxColumn.HeaderText = "password"
+        Me.PasswordDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
+        Me.PasswordDataGridViewTextBoxColumn.Width = 125
+        '
+        'UsertypeDataGridViewTextBoxColumn
+        '
+        Me.UsertypeDataGridViewTextBoxColumn.DataPropertyName = "usertype"
+        Me.UsertypeDataGridViewTextBoxColumn.HeaderText = "usertype"
+        Me.UsertypeDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.UsertypeDataGridViewTextBoxColumn.Name = "UsertypeDataGridViewTextBoxColumn"
+        Me.UsertypeDataGridViewTextBoxColumn.Width = 125
         '
         'frm_accountManage
         '
@@ -494,4 +529,8 @@ Partial Class frm_accountManage
     Friend WithEvents employee_id As DataGridViewTextBoxColumn
     Friend WithEvents password As DataGridViewTextBoxColumn
     Friend WithEvents usertype As DataGridViewTextBoxColumn
+    Friend WithEvents IdentityidDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmployeeidDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents PasswordDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UsertypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
